@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Josefin+Sans&display=swap');
+
+:root{
+  --primary-bg-color: rgb(231, 231, 229);
+  --secondary-bg-color: rgb(175, 174, 174);
+  --primary-text-color: rgb(20, 20, 20);
+  --secondary-text-color: rgb(48, 47, 47);
+  
+}
+body.active{
+  --primary-bg-color: rgb(39, 39, 39);
+  --secondary-bg-color: rgb(80, 79, 79);
+  --primary-text-color: rgb(236, 236, 236);
+  --secondary-text-color: rgb(194, 194, 194);
+  
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
+  transition: all .2s linear;
+}
+body{
+  background-color: var(--primary-bg-color);
+  position: relative;
+}
+#display{
+  text-align: right;
+  height: 90px;
+  line-height: 90px;
+  box-shadow: inset -6px -6px 13px #ebeaeae8, inset 6px 6px 13px rgba(0, 0, 0, 0.16);
+  padding: 10px;
+  margin: 10px;
+  font-size: 40px;
+  border-radius: 10px;
+  top: 2;
+  color: var(--primary-text-color);
+  background-color: var(--primary-bg-color) ;
+  overflow-x: scroll;
+  position: relative;
+}
+
+.result{
+  position: absolute;
+  bottom: 0;
+  left: 10;
+}
+
+.container{
+  max-width: 400px;
+  height: auto;
+  margin: 50px auto 0 auto;
+  background-color: var(--primary-bg-color);
+  box-shadow:-6px -6px 13px #f7f6f6e8, 6px 6px 13px rgba(0, 0, 0, 0.16);
+  padding: 20px;
+  border-radius: 9px;
+}
+.buttons{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 12px;
+  padding: 10px;
+}
+button{
+  height: 70px;
+  box-shadow: -5px -5px 9px #f1f0f0f3, 5px 5px 9px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  background-color: var(--primary-bg-color);
+  color: var(--primary-text-color);
+  cursor: pointer;
+  font-family: 'Josefin Sans', sans-serif;
+  border: none;
+  transition: .2s ease-in-out;
+}
+button:hover{
+  background-color: var(--secondary-bg-color);
+  box-shadow:inset -3px -3px 7px #d8d8d8b9, inset 3px 3px 5px rgba(0, 0, 0, 0.3);
+
+}
+.buttons > button{
+  text-align: center;
+  padding: 20px;
+  font-size: 25px;
+}
+#equal{
+  grid-column: 3 / span 2;
+  background-color: rgb(121, 121, 121);
+}
+i{
+  
+  color: var(--primary-text-color);
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
